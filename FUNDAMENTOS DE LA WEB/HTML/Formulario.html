@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mi Formulario de Registro</title>
+</head>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+ 
+
+</style>
+
+<body>
+    <h1>Mi Formulario de Registro</h1>
+    <form action="">
+            <label for="name">Nombre:
+                <input type="text" id="name" name="name"></input>
+            </label>
+
+            <label for="lastname">Apellido:
+                <input type="text" id="lastname" name="lastname"></input>
+            </label>
+
+            <label for="email">Email:
+                <input type="text" id="email" name="email"></input>
+            </label>
+
+            <label for="password">Contraseña:
+                <input type="password" id="password" name="password"></input>
+            </label>
+
+            <label for="confirm_password">Confirmar:
+                <input type="password" id="confirm_password" name="confirm_password"></input>
+            </label>
+
+            <label for="birthday">Cumpleaños:
+                <input type="date" id="birthday" name="birthday"></input>
+            </label>
+             
+            <label for="generoh">Hombre
+                <input type="radio" id="hombre" name="genero" value="hombre" />
+            </label>
+             
+            <label for="generom">Mujer
+                <input type="radio" id="mujer" name="genero" value="mujer" />
+            </label>
+             
+              <label for="otro">Otro
+                <input type="radio" id="otro" name="genero" value="otro" />
+            </label>
+        <p>Una breve descripcion de ti:</p>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50"> </textarea>
+            <label for="languaje">Lenguaje favorito:
+                <select name="languaje" id="languaje">
+                    <option value="javascrit">Javascrit</option>
+                    <option value="python">Python</option>
+                    <option value="csharp">C#</option>
+                </select>
+            </label>
+        <button name="enviar">Enviar</button>
+    </form>
+
+</body>
+
+</html>
