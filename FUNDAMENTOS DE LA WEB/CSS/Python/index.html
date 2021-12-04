@@ -5,21 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <title>Python</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div id="wrapper">
         <header>
-            <img src="./img/python.png" alt="pythonimg">
-            <div class="header-info">
-                <span>Text Size <a href="#">Normal</a> <a href="#">Large</a></span>
-                <div class="search">
-                    <input placeholder="Search..."/>
-                    <button>Go</button>
-                </div>
+            <img src="./img/python.png" alt="pythonlogo"/>
+            <div id="search-input">
+                <p>Text Size: <a href="#">Normal</a>|<a href="#">Large</a></p>
+                <form id="search-form" action="">
+                    <input type="text" placeholder="Search">
+                    <button id="go-btn">Go</button>
+                </form>
             </div>
         </header>
-        
+        <nav id="menu">
+            <a class="menu-option" href="#">about</a>
+            <a class="menu-option" href="#">downloads</a>
+            <a class="menu-option" href="#">documentation</a>
+            <a class="menu-option" href="#">community</a>
+            <a class="menu-option" href="#">news</a>
+            <a class="menu-option" href="#">events</a>
+        </nav>
+        <div id="content">
+            <ul id="links">
+                <li><a href="#">docs</a></li>
+                <li><a href="#">audioVisual Talks</a></li>
+                <li><a href="#">beginner's Guide</a></li>
+                <li><a href="#">developer's Guide</a></li>
+                <li><a href="#">pep Index</a></li>
+                <li><a href="#">python Books</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+            <p id="content-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime rem saepe omnis. Quae molestias quod labore pariatur omnis perspiciatis sed dignissimos beatae dicta fuga, eius similique illo adipisci ab aut. Suscipit sint mollitia et vero reiciendis! Tempora quibusdam quaerat ut nulla, nostrum similique labore, accusantium, repellendus a voluptatem hic quis.
+            </p>
+            <ul id="other-list">
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+            <p id="content-p">the Zend of Python</p>
+        </div>
+        <div id="extras">
+            <article class="extra-articule"> 
+                <h2>getting Started</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, debitis!</p>
+                <ul class="extralist">
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+            </article>
+            <article class="extra-articule"> 
+                <h2>getting Started</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, debitis!</p>
+                <ul class="extralist">
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+            </article>
+        </div>
+        <footer>
+            <ul>
+                <li><a>Help and General Contact</a></li>
+                <li><a>Diversity Initiaives</a></li>
+                <li><a>Submit Website Bugs</a></li>
+            </ul>
+            <p>Copyright &copy;2001-2016</p>
+        </footer>
     </div>
 </body>
 </html>
