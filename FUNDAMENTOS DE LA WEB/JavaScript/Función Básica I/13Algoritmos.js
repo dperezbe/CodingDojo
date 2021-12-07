@@ -112,14 +112,13 @@ console.log(alg9(array8));
 //Negativos: Dado un array con múltiples valores, escribe una función que reemplace cualquier número negativo dentro del array por 0. Cuando el programa esté listo, el array no debiera contener números negativos (ej: [1,5,10,-2] se convertirá en [1,5,10,0]).
 let array9 = [1,5,10,-2];
 function alg10(array){
-    array.forEach(element =>{
+    array.forEach((element,i) =>{
         if(element<0){
-            array[element] = 0;
+            array[i] = 0;
         }
     })
     return array;
 }
-console.log("Consulta");
 console.log(alg10(array9));
 
 
