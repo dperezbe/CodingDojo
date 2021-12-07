@@ -85,22 +85,87 @@ function alg7(){
 console.log(alg7());
 
 // Mayor que Y: Dado un valor Y, escribe una función que toma un array y devuelve los valores mayores que Y. Por ejemplo, si arr = [1,3,5,7] y Y = 3, tu función devolverá 2 (hay 2 números en el array mayores que 3, esto son 5 y 7). 
+let array7 = [1,3,5,7];
+let valor = 3;
+function alg8(array){
+    let maxNum =0;
+    array.forEach(element => {
+        if(element >valor){
+            maxNum+=1;
+        }
+    });
+    return maxNum;
+}
 
+console.log(alg8(array7));
 
 //Cuadrados: Dado un array con múltiples valores, escribe una función que reemplace cada valor por el cuadrado del mismo valor (ej: [1,5,10,-2] será [1,25,100,4]).
-
+let array8 = [1,5,10,-2];
+function alg9(array){
+    for (let index = 0; index < array.length; index++) {
+        array[index] = array[index] * array[index];
+    }
+    return array;
+}
+console.log(alg9(array8));
 
 //Negativos: Dado un array con múltiples valores, escribe una función que reemplace cualquier número negativo dentro del array por 0. Cuando el programa esté listo, el array no debiera contener números negativos (ej: [1,5,10,-2] se convertirá en [1,5,10,0]).
+let array9 = [1,5,10,-2];
+function alg10(array){
+    array.forEach(element =>{
+        if(element<0){
+            array[element] = 0;
+        }
+    })
+    return array;
+}
+console.log("Consulta");
+console.log(alg10(array9));
 
 
 //Max/Min/Avg: Dado un array con múltiples valores, escribe una función que devuelva un nuevo array que solo contenga el valor mayor (max), menor (min) y promedio (avg) del array original (ej: [1,5,10,-2] devolverá [10,-2,3.5]).
-
-
+let array10 = [1,5,10,-2];
+function alg11(array){
+    let _array = [];
+    let sum = 0;
+    let min = array[0];
+    let max = array[0];
+    array.forEach(t => {
+        sum +=t;
+        if(t < min){
+            min = t;
+        }
+        if(t > max){
+            max = t;
+        }
+    })
+ 
+    _array[0] = max;
+    _array[1] = min;
+    _array[2] = sum/array.length;
+    return _array;
+}
+console.log(alg11(array10));
 //Intercambia Valores: Escribe una función que intercambie el primer y el último valor de cualquier array. La extensión mínima predeterminada del array es 2 (ej: [1,5,10,-2] será [-2,5,10,1]). 
-
-
+let array11 = [1,5,10,-2];
+function alg12(array){
+    let temp = array[0];
+    array[0] = array[array.length-1];
+    array[array.length-1] = temp;
+    return array
+}
+console.log(alg12(array11))
 // De Número a String: Escribe una función que tome un array de números y reemplace cualquier valor negativo por el string ‘Dojo’. Por ejemplo, dado el array = [-1,-3,2], tu función devolverá [‘Dojo’,‘Dojo’,2].
-
+let array12 = [-1,-3,2];
+function alg13(array){
+    for (let index = 0; index < array.length; index++) {
+        if(array[index]<0){
+            array[index] = 'Dojo';
+        }
+    }
+    return array;
+}
+console.log(alg13(array12));
 
 
 
