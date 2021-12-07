@@ -4,6 +4,7 @@ var users = [{name: "Michael", age:37}, {name: "John", age:30}, {name: "David", 
 users.forEach(element => {
     if(element.name == "John"){
         console.log("John ",element.age);
+        break;
     }
 })
 

@@ -1,7 +1,7 @@
 // Obtén del 1 al 255: Escribe una función que devuelve un array con todos los números del 1 al 255.
 let array1 = [];
 function alg1(){
-    for(var i=0 ; i<=255; i++){
+    for(var i=1 ; i<=255; i++){
         array1.push(i);
     }
     console.log(array1);
@@ -16,9 +16,9 @@ function alg2(){
             sum+=i;
         }
     }
-    console.log(sum);
+    return sum;
 }
-alg2();
+console.log(alg2());
 
 // Suma impares hasta 5000: Escribe una función que devuelva la suma de todos los números impares entre 1 y 5000 (ej: 1+3+5+...+4997+4999).
 function alg3(){
@@ -28,9 +28,9 @@ function alg3(){
             sum+=i;
         }
     }
-    console.log(sum);
+    return sum;
 }
-alg3();
+console.log(alg3());
 
 
 // Itera un array: Escribe una función que devuelva la suma de todos los valores dentro de un array (ej:  [1,2,5] retorna 8. [-5,2,5,12] retorna 14). 
