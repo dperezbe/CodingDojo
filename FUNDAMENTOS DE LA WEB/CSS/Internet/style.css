@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 970px;
+    margin: auto;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 15vh;
+    width: 100%;
+}
+
+header h1{
+    padding-top: 30px;
+    font-size: 40px;
+}
+header h2{
+    width: 100%;
+    background: blue;
+    padding: 15px;
+    color: white;
+}
+
+header span{
+    color: blue;
+}
+#globe-img{
+    position: relative;
+    top: 12%;
+    height: 55%;
+}
+
+.left-info{
+    width: 30%;
+    height: 100vh;
+    margin-top: 3%;
+}
+
+.main-content{
+    width: 70%;
+    margin-top: 4%;
+    height: 100vh;
+}
+
+.left-info  .red-text{
+    color: red;
+}
+
+.left-info  .blue-text{
+    color: blue;
+}
+
+.left-info  {
+    padding:2% 1% 5% 1%;
+}
+
+#watch-btn{
+    padding: 2%;
+    background: blue;
+    color: white;
+    width: 90%;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    border: solid;
+    border-color: blue;
+    border-radius: 5px;
+}
+
+#resources-btn{
+    padding: 2%;
+    background: rgb(255, 187, 41);
+    color: white;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    border: solid;
+    border-color: rgb(255, 187, 41);
+    border-radius: 5px;
+}
+
+
+
+hr{
+    border: 1px solid rgb(202, 198, 198);
+    margin-bottom: 2%;
+}
+
+#poster{
+    background-image: url("./img/images/ad_background.png");
+    height: 500px;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+}
+
+#ninja-img{
+    width: 50%;
+    margin-left: 20%;
+    margin-bottom: 10%;   
+}
+
+#poster h4{
+    margin: 8%;
+}
+
+#learnmore{
+    background: lightblue;
+    color: white;
+    border-radius: 10px;
+    margin: 3%;
+    font-size: 30px;
+}
+
+
+#mc-header{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+}
+
+
+
+#client-server{
+    height: 50%;
+}
+
+section h3{
+    color: blue;
+    margin-bottom: 1%;
+    font-size: 25px;
+}
+
+#client-server li{
+    list-style: inside;
+    padding: 20px;
+}
+
+#what-happens ol{
+    padding: 20px;
+}
+
+#what-happens{
+    height: 40%;
+}
+
+#phone-icon{
+    color: var(--blue);
+    font-size: 2rem;
+    padding-top: 2%;
+    margin-left: 59%;
+}
+
+#the-big{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 23%;
+    border: solid 7px blue;
+}
+
+#mc-contact-details{
+    width: 100%;
+    margin-left: 2%;
+}
+
+#mc-contact-details p{
+    font-size: 13px;
+}
+#contact-number{
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#server-client{
+    width: 50%;
+    margin-left: 25%;
+}
+
+
+
+#the-big img{
+    height: 100%;
+    width: 25%;
+    padding: 2%;
+}
+
+#the-big p{
+    width: 70%;
+}
