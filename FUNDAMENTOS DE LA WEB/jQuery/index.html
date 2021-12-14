@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Ninja Desaparecido</title>
+</head>
+
+<body>
+    <img id="1" src="./img/ninja.jpg" alt="img">
+    <img id="2" src="./img/ninja.jpg" alt="img">
+    <img id="3" src="./img/ninja.jpg" alt="img">
+    <img id="4" src="./img/ninja.jpg" alt="img">
+    <img id="5" src="./img/ninja.jpg" alt="img">
+    <img id="6" src="./img/ninja.jpg" alt="img">
+    <img id="7" src="./img/ninja.jpg" alt="img">
+    <img id="8" src="./img/ninja.jpg" alt="img">
+    <button id="restore">Restore</button>
+</body>
+
+<script>
+    let list=$("img");
+    list.click(function(){
+        let id = $(this).attr("id");
+        $("#"+id).hide();
+    })
+
+    $("#restore").click(function(){
+        console.log("show");
+        $("img").show();
+    });
+
+</script>
+
+</html>
