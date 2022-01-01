@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  background-color: gray;
+  min-height: 100vh;
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.App-header {
+  background-color: #00ff4c;
+  height: 150px;
+  margin-bottom: 3%;
+  width: 100%;  
+}
+
+
+.App-nav{
+  background-color: aqua;
+  min-height: 60vh;
+  width: 20%;
+}
+
+.App-main{
+  background-color: red;
+  min-height: 80vh;
+  width: 77%;
+  margin-left: 3%;
+}
+
+.App-subcontent{
+  background-color: yellow;
+  height: 50%;
+  width: 25%;
+  margin-left: 6%;
+  margin-top: 3%;
+  display: inline-block;
+}
+
+.App-Advertisement{
+  margin: 5%;
+  background-color: palevioletred;
+  height: 25%;
+}
