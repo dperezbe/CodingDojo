@@ -28,6 +28,9 @@ const Form = (props) => {
           else{
             setError({...error,error_firstName: ""});
           }
+          if(e.target.value == ''){
+            setError({...error,error_firstName: ""});
+          }
           break;
         }
       case 'lastName':
@@ -36,6 +39,9 @@ const Form = (props) => {
             setError({...error,error_lastName: "LastName debe tener más de 2 caracteres"});
           }
           else{
+            setError({...error,error_lastName: ""});
+          }
+          if(e.target.value == ''){
             setError({...error,error_lastName: ""});
           }
           break;
@@ -48,6 +54,9 @@ const Form = (props) => {
             else{
               setError({...error,error_email: ""});
             }
+            if(e.target.value == ''){
+              setError({...error,error_email: ""});
+            }
             break;
           }       
           case 'password':
@@ -56,6 +65,9 @@ const Form = (props) => {
                 setError({...error,error_minpassword: "Password debe tener más de 8 caracteres"});
               }
               else{
+                setError({...error,error_minpassword: ""});
+              }
+              if(e.target.value == ''){
                 setError({...error,error_minpassword: ""});
               }
               break;
@@ -68,10 +80,14 @@ const Form = (props) => {
                 else{
                   setError({...error,error_minpassword: ""});
                 }
+                if(e.target.value == ''){
+                  setError({...error,error_minpassword: ""});
+                }
                 break;
             }       
            
     }
+    
   };
   
   
