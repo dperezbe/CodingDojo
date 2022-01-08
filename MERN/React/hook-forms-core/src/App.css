@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+.form-group-alert{
+  width: 370px;
+  margin-top: 6px;
+  margin-bottom: 25px;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.form-group{
+  background-color: rgb(216, 216, 216);
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  border: rgb(100, 99, 99) solid 1px;
+}
+
+label{
+  width: 35% ;
+}
+
+input{
+  width: 65%;
+  padding: 10px;
+}
+
+.result{
+  text-align: left;
+  margin-left: 30%;
+  margin-top: 5%;
+}
