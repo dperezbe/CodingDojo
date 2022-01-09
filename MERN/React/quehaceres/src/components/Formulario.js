@@ -3,27 +3,29 @@ import React, { useState } from 'react';
 const Formulario = ({tareas,setTareas}) => {
 
 
-    const [nuevatarea, setNuevatarea] = useState();
+    const [nuevatarea, setNuevatarea] = useState('');
 
-    const handleInputChange = (event) => {
-        setNuevatarea(event.target.value)
-    }
-
-    
      const agregarTarea = (event) => {
         event.preventDefault()
-        setTareas([...tareas,nuevatarea]);
+        if(nuevatarea != ''){
+            setTareas([...tareas,nuevatarea]);
+            setNuevatarea('');
+        }
     }
 
     return (
         <form onSubmit={agregarTarea}>
             <input 
+                placeholder='Get MERN back belt'
                 type='text'
                 name='nuevatarea'
-                onChange={handleInputChange}
+                value={nuevatarea}
+                onChange={e => setNuevatarea(e.target.value)}
             />
             <input 
+                className='btn-add'
                 type='submit'
+                value="Add"
             />
         </form>
     );
