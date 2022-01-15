@@ -3,7 +3,6 @@ import ShowInfo from './ShowInfo';
 
 const Info = ({info,category}) => {
     const {status , data} = info;
-    console.log(status);
     return (
         <div>
             {status == 200 ? 

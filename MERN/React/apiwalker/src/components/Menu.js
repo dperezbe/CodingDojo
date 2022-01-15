@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import Info from './Info';
 
@@ -6,48 +6,66 @@ const Menu = (props) => {
 
     const [search,setSearch] = useState({
         category: 'people',
-        id: props.id ? props.id : 1
+        id: props.id ? props.id : ''
     });
+
 
     const [info, setInfo] = useState();
 
       const  {category,id} = search;
+
+      const requestAPI = () => {
+        switch(search.category) {
+            case 'people':
+                axios.get(`https://swapi.dev/api/people/${id}`)
+                    .then(response => setInfo(response))
+                    .catch(e => setInfo(e))
+              break;
+            case 'planets':
+                axios.get(`https://swapi.dev/api/planets/${id}`)
+                    .then(response => setInfo(response))
+                    .catch(e => setInfo(e))
+              break;
+            case 'films':
+                axios.get(`https://swapi.dev/api/films/${id}`)
+                .then(response => setInfo(response))
+                .catch(e => setInfo(e))
+                break;
+            case 'species':
+                axios.get(`https://swapi.dev/api/species/${id}`)
+                .then(response => setInfo(response))
+                .catch(e => setInfo(e))
+                break;
+            case 'vehicles':
+                axios.get(`https://swapi.dev/api/vehicles/${id}`)
+                .then(response => setInfo(response))
+                .catch(e => setInfo(e))
+                break;      
+            case 'starships':
+                axios.get(`https://swapi.dev/api/starships/${id}`)
+                .then(response => setInfo(response))
+                .catch(e => setInfo(e))
+                break;          
+          }
+      }
 
       const handlerform = (e) =>{
         setSearch({...search,[e.target.id] :e.target.value})
         setInfo(null);
       }
 
+
+
     const btnsearch = (e) =>{
         e.preventDefault();
-        switch(search.category) {
-            case 'people':
-                axios.get(`https://swapi.dev/api/people/${id}`)
-                    .then(response => setInfo(response));
-              break;
-            case 'planets':
-                axios.get(`https://swapi.dev/api/planets/${id}`)
-                    .then(response => setInfo(response));
-              break;
-            case 'films':
-                axios.get(`https://swapi.dev/api/films/${id}`)
-                .then(response => setInfo(response));
-                break;
-            case 'species':
-                axios.get(`https://swapi.dev/api/species/${id}`)
-                .then(response => setInfo(response));
-                break;
-            case 'vehicles':
-                axios.get(`https://swapi.dev/api/vehicles/${id}`)
-                .then(response => setInfo(response));
-                break;      
-            case 'starships':
-                axios.get(`https://swapi.dev/api/starships/${id}`)
-                .then(response => setInfo(response));
-                break;          
-          }
-
+        requestAPI();
     }
+
+    useEffect(() => {
+        if(id != ''){
+        requestAPI();
+        }
+      }, [search]);
 
     return (
         <>
