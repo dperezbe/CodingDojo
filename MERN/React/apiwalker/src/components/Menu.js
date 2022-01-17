@@ -65,7 +65,7 @@ const Menu = (props) => {
         if(id != ''){
         requestAPI();
         }
-      }, [search]);
+      }, []);
 
     return (
         <>
