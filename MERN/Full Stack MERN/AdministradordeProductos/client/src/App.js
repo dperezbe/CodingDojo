@@ -1,10 +1,19 @@
-import './App.css';
-import ProductForm from './components/ProductForm';
+import "./App.css";
+import React from "react";
+import Productinfo from "./components/Productinfo";
+import Product from "./components/Product";
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <ProductForm  />
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Product />} />
+          <Route exact path="/:id" element={<Productinfo />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
