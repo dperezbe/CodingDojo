@@ -4,6 +4,7 @@ import axios from 'axios';
 import {
     useParams
   } from 'react-router-dom';
+import ProductDelete from './ProductDelete';
 
 const Productinfo = () => {
     const { id } = useParams();
@@ -26,7 +27,9 @@ const Productinfo = () => {
              </div>
             : null}
            
-
+            <ProductDelete
+                id={id}
+            />
         </div>
     );
 };

@@ -28,3 +28,15 @@ exports.showById = (req,res) => {
         res.send(error);
     }
 }
+
+module.exports.updateProduct = (request, response) => {
+    ProductModel.findOneAndUpdate({_id: request.params.id}, request.body, {new:true})
+        .then(data => response.json(data))
+        .catch(err => response.json(err))
+}
+
+module.exports.deleteProduct = (request, response) => {
+    ProductModel.deleteOne({ _id: request.params.id })
+        .then(deleteConfirmation => response.json(deleteConfirmation))
+        .catch(err => response.json(err))
+}

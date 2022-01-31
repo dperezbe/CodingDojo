@@ -28,12 +28,14 @@ const ProductForm = ({setProductdB}) => {
         e.preventDefault();
         console.log(product);
         axios.post(`http://127.0.0.1:8000/api/product/new`,product)
-        .then(response => e.innerHTML = product )
+        .then(response => 
+            axios.get(`http://127.0.0.1:8000/api/product/show`)
+            .then(response => setProductdB(response.data) )
+            .catch(e => console.log(e))
+             )
         .catch(e => console.log(e))
 
-        axios.get(`http://127.0.0.1:8000/api/product/show`)
-        .then(response => setProductdB(response.data) )
-        .catch(e => console.log(e))
+       
     }
 
     return (
