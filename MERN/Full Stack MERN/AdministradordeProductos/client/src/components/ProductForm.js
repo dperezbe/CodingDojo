@@ -27,9 +27,9 @@ const ProductForm = ({setProductdB}) => {
       const btnregistrar = (e) =>{
         e.preventDefault();
         console.log(product);
-        axios.post(`http://127.0.0.1:8000/api/product/new`,product)
+        axios.post(`/api/product/new`,product)
         .then(response => 
-            axios.get(`http://127.0.0.1:8000/api/product/show`)
+            axios.get(`/api/product/show`)
             .then(response => setProductdB(response.data) )
             .catch(e => console.log(e))
              )

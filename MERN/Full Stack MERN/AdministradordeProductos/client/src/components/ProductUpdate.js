@@ -18,7 +18,7 @@ const ProductUpdate = () => {
   const [description, setDescription] = useState();
   
   useEffect(() => {
-    axios.get("http://localhost:8000/api/product/" + id).then((res) => {
+    axios.get("/api/product/" + id).then((res) => {
       setTitle(res.data.data.title);
       setPrice(res.data.data.price);
       setDescription(res.data.data.description);
@@ -27,7 +27,7 @@ const ProductUpdate = () => {
 
   const updateProduct = (e) => {
     e.preventDefault();
-    axios.put('http://localhost:8000/api/product/' + id, {
+    axios.put('/api/product/' + id, {
             title,
             price,
             description

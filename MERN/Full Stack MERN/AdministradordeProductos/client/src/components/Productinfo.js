@@ -11,7 +11,7 @@ const Productinfo = () => {
     const [productId, setProductoId] = useState();
   
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/api/product/${id}`)
+        axios.get(`/api/product/${id}`)
         .then(response => setProductoId(response.data.data))
         .catch(e => console.log(e))
       }, []);

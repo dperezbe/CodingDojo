@@ -5,7 +5,7 @@ import ProductDelete from "./ProductDelete";
 const ProductShow = ({ productDb, setProductdB }) => {
   useEffect(() => {
     axios
-      .get(`http://127.0.0.1:8000/api/product/show`)
+      .get(`/api/product/show`)
       .then((response) => setProductdB(response.data))
       .catch((e) => console.log(e));
   }, []);

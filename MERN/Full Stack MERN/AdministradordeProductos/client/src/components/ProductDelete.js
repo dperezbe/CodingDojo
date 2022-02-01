@@ -13,9 +13,9 @@ const ProductDelete = ({id,title,setProductdB}) => {
         e.preventDefault();
 
         
-        axios.delete(`http://127.0.0.1:8000/api/product/`+id)
+        axios.delete(`/api/product/`+id)
         .then(response => 
-            axios.get(`http://127.0.0.1:8000/api/product/show`)
+            axios.get(`/api/product/show`)
             .then((response) => setProductdB(response.data))
             .catch((e) => console.log(e))
         )
